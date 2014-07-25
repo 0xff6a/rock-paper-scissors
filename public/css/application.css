@@ -1,5 +1,6 @@
 body {
 	text-align: center;
+	background-color: black;
   background-image: url(/images/battle.png);
   background-size:   cover;                    
   background-repeat: no-repeat;
@@ -22,6 +23,7 @@ form {
 input {
 
 	font-family: Brush Script MT;
+	display: inline-block;
 	font-size: 50;
 	text-align: center;
 	color: black;
@@ -32,9 +34,6 @@ input {
 	margin-top: 90;
 }
 
-#register-button {
-	margin-right: 375;
-}
 
 button {
 	font-size: 35;
@@ -51,21 +50,25 @@ button {
 	padding-top: 120
 }
 
+#register-button {
+	float: none;
+}
+
 
 h1 {
-	font-size: 50;
+	font-size: 60;
 	padding-top: 50;
 	font-family: Brush Script mT;
 	margin: 10;
 }
 
 h2 {
-	font-size: 30;
+	font-size: 40;
 	padding-top: 0;
 	font-family: Brush Script mT;
 	font-style: italic;
-	margin-right: 250;
-	margin-left: 250;
+	margin-right: 300;
+	margin-left: 300;
 	margin-bottom: 0;
 	margin-top: 0;
 	display: inline-block;
@@ -73,10 +76,10 @@ h2 {
 }
 
 h3 {
-	font-size: 25;
+	font-size: 30;
 	padding-top: 0;
 	font-family: Brush Script mT;
-	margin-right: 300;
+	margin-right: 500;
 	margin-top: 10;
 	text-align: right;
 }
