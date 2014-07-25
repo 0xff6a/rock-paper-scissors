@@ -1,10 +1,15 @@
-<h1> RESULTS: </h1>
 <% if @game.winner == "Draw" %>
- <h2> It was a draw </h2>
- <% elsif @game.winner.name == "Deep Blue" %>
- <h2> You lost, the computer won with <%= @game.winner.pick %></h2>
+ <h1> DRAW! </h1>
+ <h2>"If it doesn't matter who wins or loses, then why do they keep score?"</h2>
+	<h3>- Vince Lombardi</h3>
+<% elsif @game.winner.name == "Deep Blue" %>
+	<h1> DEFEAT! </h1>
+  <h2> "Defeat is not the worst of failures. Not to have tried is the true failure."</h2>
+	<h3>- George Edward Woodberry</h3>
 <% else %>
-<h2> You won, with <%= @game.winner.pick %> </h2>
+	<h1> VICTORY </h1>
+	<h2>"All men can see these tactics whereby I conquer, but what none can see is the strategy out of which victory is evolved."</h2>
+	<h3>- Sun Tzu</h3>
 <%end%>
 
 

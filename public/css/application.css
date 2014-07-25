@@ -9,10 +9,9 @@ a {
 	font-family: Brush script MT;
 	color: black;
 	margin: 150;
-	background-color: beige;
 	display: block;
 	text-align: center;
-	font-size: 64;
+	font-size: 80;
 }
 
 form {
@@ -52,6 +51,20 @@ h1 {
 h2 {
 	padding-top: 0;
 	font-family: Brush Script mT;
-	font-size: 50;
-	margin: 0;
+	font-size: 35;
+	font-style: italic;
+	margin-left: 250;
+	margin-right: 250;
+	margin-bottom: 0;
+	margin-top: 20;
+	color: white;
+}
+
+h3 {
+	padding-top: 0;
+	font-family: Brush Script mT;
+	font-size: 30;
+	margin-right: 300;
+	margin-top: 10;
+	text-align: right;
 }
