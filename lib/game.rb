@@ -11,12 +11,21 @@ class Game
 	attr_reader :players, :player1, :player2
 
 	def winner
-		return "Draw" if player1.pick == player2.pick
-		return player1  if BEATS[normalize(player1.pick)] == normalize(player2.pick)
+		return "Draw" if draw?
+		return player1  if player1_wins?
 		player2
 	end
 
 	def normalize(pick)
 		pick.downcase.to_sym
 	end
+
+	def draw?
+		player1.pick == player2.pick
+	end
+
+	def player1_wins?
+		BEATS[normalize(player1.pick)] == normalize(player2.pick)
+	end
+
 end

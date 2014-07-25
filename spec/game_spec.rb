@@ -1,9 +1,10 @@
 require 'game' 
 
 describe Game do 
-	let(:player1) {double :player1, name: "Stephen"}
-	let(:player2) {double :player1, name: "Enrique"}
-	let(:game){Game.new(player1, player2)}
+
+	let(:player1) { double :player1, name: "Stephen"	}
+	let(:player2) { double :player1, name: "Enrique"	}
+	let(:game)		{ Game.new(player1, player2)				}
 
 	it "has two players" do
 		expect(game.players).to eq [player1, player2]
@@ -11,25 +12,25 @@ describe Game do
 
 	context 'when playing' do
 
-		it 'player one picks rock, player two picks scissors' do
+		it 'player one picks rock, player two picks scissors, player 1 wins' do
 			allow(player1).to receive(:pick).and_return("Rock")
 			allow(player2).to receive(:pick).and_return("Scissors")
 			expect(game.winner).to eq player1
 		end
 
-		it 'player one picks paper, player two picks scissors' do
+		it 'player one picks paper, player two picks scissors, player 2 wins' do
 			allow(player1).to receive(:pick).and_return("Paper")
 			allow(player2).to receive(:pick).and_return("Scissors")
 			expect(game.winner).to eq player2
 		end
 
-		it "player one picks paper, player two picks rock" do
+		it "player one picks paper, player two picks rock, player1 wins" do
 			allow(player1).to receive(:pick).and_return("Paper")
 			allow(player2).to receive(:pick).and_return("Rock")
 			expect(game.winner).to eq player1
 		end
 
-		it "can be a draw" do
+		it "can be a draw if both pick the same" do
 			allow(player1).to receive(:pick).and_return("Paper")
 			allow(player2).to receive(:pick).and_return("Paper")
 			expect(game.winner).to eq "Draw"
