@@ -4,6 +4,8 @@ require './lib/computer'
 require './lib/game'
 
 class RockPaperScissors < Sinatra::Base
+
+  enable :sessions
   
   get '/' do
     erb :index
@@ -14,8 +16,12 @@ class RockPaperScissors < Sinatra::Base
   end
 
   post '/register' do 
-  	@player = params[:name]
-  	erb :play	
+  	session[:player] = params[:name]
+    load_play	
+  end
+
+  get '/register' do
+    load_playgit 
   end
 
   post "/play" do
@@ -24,6 +30,11 @@ class RockPaperScissors < Sinatra::Base
     generate_picks(player, computer, params[:pick])
   	@game = generate_game(player, computer)
   	erb :outcome
+  end
+
+  def load_play
+    @player = session[:player]
+    erb :play 
   end
 
   def generate_player(name)

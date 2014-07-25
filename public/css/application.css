@@ -6,6 +6,10 @@ body {
   background-repeat: no-repeat;
 }
 
+#restart {
+	color: white
+}
+
 a {
 	font-family: Brush script MT;
 	color: black;
