@@ -1,0 +1,50 @@
+body {
+	text-align: center;
+  background-image: url(/images/battle.png);
+  background-size:   cover;                    
+  background-repeat: no-repeat;
+}
+
+a {
+	font-family: Brush script MT;
+	color: black;
+	margin: 150;
+	background-color: beige;
+	display: block;
+	text-align: center;
+	font-size: 64;
+}
+
+form {
+	display: inline-block;
+}
+
+
+input {
+
+	font-family: Brush Script MT;
+	font-size: 64;
+	text-align: center;
+	color: black;
+	background-color: beige;
+	border: black;
+	border-width: thick;
+	width: 600;
+}
+
+button {
+	font-size: 40;
+	font-family: Brush Script MT;
+	float: right;
+	margin-right: 475;
+	width: 150;
+	height: 50;
+	vertical-align: middle;
+}
+
+h1 {
+	padding-top: 120;
+	font-family: Brush Script mT;
+	font-size: 60;
+	margin: 10;
+}
