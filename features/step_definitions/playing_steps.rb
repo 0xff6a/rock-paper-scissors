@@ -1,5 +1,5 @@
-When(/^I click "(.*?)"$/) do |arg1|
-  click_link arg1
+When(/^I click "(.*?)"$/) do |link_name|
+  click_link link_name
 end
 
 When(/^I enter my name$/) do
@@ -15,6 +15,6 @@ Given(/^I've registered to play$/) do
   click_button "Play!"
 end
 
-When(/^I choose Paper$/) do
-  click_button('Paper')
+When(/^I choose '(.*?)'$/) do |move|
+  click_button(move)
 end
