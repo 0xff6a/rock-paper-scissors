@@ -10,7 +10,7 @@ describe Computer do
 
 	it 'can make random picks' do
 		expect(Computer::CHOICES).to receive(:sample)
-		computer.pick
+		computer.autopick
 	end
 
 end
