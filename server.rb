@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/player'
+require './lib/computer'
 require './lib/game'
 
 class RockPaperScissors < Sinatra::Base
@@ -18,22 +19,29 @@ class RockPaperScissors < Sinatra::Base
   end
 
   post "/play" do
-  	player = Player.new(params[:name])
-  	player.picks = params[:pick]
+  	player = generate_player(params[:name])
   	computer = generate_computer
-  	@game = Game.new(player, computer)
+    generate_picks(player, computer, params[:pick])
+  	@game = generate_game(player, computer)
   	erb :outcome
   end
 
-  def generate_computer
-  	choice = ["Rock","Paper","Scissors"].sample
-
-  	comp = Player.new("computer")
-  	comp.picks = choice
-  	comp
+  def generate_player(name)
+    Player.new(name)
   end
 
-  
+  def generate_computer
+    Computer.new
+  end
+
+  def generate_game(player, computer)
+    Game.new(player, computer)
+  end
+
+  def generate_picks(player, computer, choice)
+    player.picks = choice
+    computer.autopick
+  end
 
   # start the server if ruby file executed directly
   run! if app_file == $0

@@ -8,7 +8,7 @@ class Computer < Player
 		super("Deep Blue")
 	end
 
-	def pick
+	def autopick
 		@picks = CHOICES.sample
 	end
 
