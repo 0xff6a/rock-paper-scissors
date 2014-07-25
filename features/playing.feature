@@ -24,3 +24,8 @@ Scenario: A player is playing
 	Given I've registered to play
 	When I choose 'Scissors'
 	Then I should see a result
+
+Scenario: A player wants to play again
+	Given I have played a round
+	Then I click "Try for further glory?"
+	Then I should be ready to play

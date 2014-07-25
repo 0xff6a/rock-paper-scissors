@@ -21,7 +21,7 @@ class RockPaperScissors < Sinatra::Base
   end
 
   get '/register' do
-    load_playgit 
+    load_play 
   end
 
   post "/play" do

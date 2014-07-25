@@ -29,3 +29,11 @@ def check_options
 	return true if page.has_content?("DEFEAT!")
 	false
 end
+
+Given(/^I have played a round$/) do
+  visit path_to('the homepage')
+  click_link "New Game"
+  fill_in "name", with: "Stephen"
+  click_button "Play!"
+  click_button 'Scissors'
+end
