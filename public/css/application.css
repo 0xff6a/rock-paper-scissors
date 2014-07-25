@@ -25,45 +25,48 @@ input {
 	font-size: 64;
 	text-align: center;
 	color: black;
-	background-color: beige;
+	background-color: transparent;
 	border: black;
 	border-width: thick;
 	width: 600;
 }
 
 button {
-	font-size: 40;
+	font-size: 35;
 	font-family: Brush Script MT;
 	float: right;
-	margin-right: 475;
-	width: 150;
-	height: 50;
+	width: 125;
+	height: 40;
 	vertical-align: middle;
+	display: inline-block;
+	margin:	10;
 }
 
 h1 {
-	padding-top: 120;
+	font-size: 50;
+	padding-top: 50;
 	font-family: Brush Script mT;
-	font-size: 60;
 	margin: 10;
 }
 
 h2 {
+	font-size: 30;
 	padding-top: 0;
 	font-family: Brush Script mT;
-	font-size: 35;
 	font-style: italic;
-	margin-left: 250;
 	margin-right: 250;
+	margin-left: 250;
 	margin-bottom: 0;
+	margin-top: 0;
+	display: inline-block;
 	margin-top: 20;
 	color: white;
 }
 
 h3 {
+	font-size: 25;
 	padding-top: 0;
 	font-family: Brush Script mT;
-	font-size: 30;
 	margin-right: 300;
 	margin-top: 10;
 	text-align: right;
