@@ -48,3 +48,10 @@ h1 {
 	font-size: 60;
 	margin: 10;
 }
+
+h2 {
+	padding-top: 0;
+	font-family: Brush Script mT;
+	font-size: 50;
+	margin: 0;
+}
