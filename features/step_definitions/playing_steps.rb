@@ -18,3 +18,14 @@ end
 When(/^I choose '(.*?)'$/) do |move|
   click_button(move)
 end
+
+Then(/^I should see a result$/) do
+  expect(check_options).to be true
+end
+
+def check_options
+	return true if page.has_content?("DRAW!")
+	return true if page.has_content?("VICTORY!")
+	return true if page.has_content?("DEFEAT!")
+	false
+end
