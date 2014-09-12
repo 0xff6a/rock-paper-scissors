@@ -1,33 +1,40 @@
-Challenge
-=========
+Week 5 Challenge @ Makers Academy 
+==================================
 
-Creating web applications seems a little bit like magic when you first come into contact with something like Sinatra. A good web developer is able to create web applications out of thin air and offer shared experiences for people around the world.
+Deploying a simple web application in sinatra. Hosted on heroku @ http://polar-badlands-2114.herokuapp.com/
 
-Your challenge this weekend is to create a rock, paper, scissors game that you can play in your browser.
+Objectives:
+-----------
 
-Level 1
--------
+- Level 1: create a sinatra based application for a rock-paper-scissors game
+- Level 2: deploy the application to heroku
+- Level 3: add NewRelic add-on to monitor app performance
+- Bonus Level: Style
 
-Grab the code (https://github.com/makersacademy/rockpaperscissors) and create a sinatra based web application that you can play on your browser (you might, or might not, need to change the code ever so slightly*).
+Ruby Version:
+-------------
+Ruby 2.1.2
 
-Level 2
--------
+Technologies:
+-------------
+- Sinatra
+- Heroku
 
-Deploy your application to Heroku. Have two separate deployment targets: staging and production, so you’ll have two apps on Heroku that you’ll be deploying to and three git remotes (origin, staging, production. More here: https://devcenter.heroku.com/articles/multiple-environments). Make sure your app works both in staging and production.
+Features:
+---------
+- A player can register to play a game of rock-paper-scissors vs. the computer
+- Motivational quotes are displayed alongside the result
 
-The goal is to have two separate deployment targets running in the same environment and on the same platform. This way you can deploy to staging first and, if everything goes well, deploy to production later. This is a common devops technique (tip: google is your friend if you did not understand this)
+Classes:
+--------
+- Player: can pick a move
+- Computer: generates random moves
+- Game: processes game result
 
-Play a round or two on both, staging and production.
+Running the application:
+------------------------
+$ rackup from root will open the application on port 9292
 
-Level 3
--------
-
-After you have deployed it to heroku, add NewRelic add-on to the production environment on Heroku and find out the average page loading time using NewRelic's interface. Explore NewRelic to see what other analytical tools are available. Write a little about what can be done with NewRelic in your own words and understanding.
-
-Bonus Level
-
-Yes, you guessed right. Make your application beautiful! It’s always nice to have an app that not only works nicely, but also looks good!
-
-Link
-----
-http://polar-badlands-2114.herokuapp.com/
+Running the test suite:
+-----------------------
+$ rspec from root
